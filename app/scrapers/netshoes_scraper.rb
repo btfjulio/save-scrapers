@@ -31,30 +31,6 @@ class NetshoesScraper
 
   end
   
-  NETSHOES = {
-    index: {
-      link: "https://www.netshoes.com.br/suplementos?campaign=compadi",
-      last_page: { 
-        tag: '.last',
-        block:  Proc.new { |content| content.text.strip().to_i }
-      },
-      products_info: {
-        link: {
-          tag: '.item-card__description__product-name',
-          block: Proc.new { |content| "https:#{content[:href]}?campaign=compadi" }
-        },
-        name: {
-          tag: '.item-card__description__product-name',
-          block: Proc.new { |content| content.text.strip() }
-        }
-        photo_url: {
-          tag: '.item-card__images__image-link img',
-          block: 
-        }
-      }
-    }
-    show: {}
-  }
 
 
   # scrape selectors to scrape products
