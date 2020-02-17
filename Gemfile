@@ -29,6 +29,10 @@ gem 'launchy'
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'letter_opener', group: :development
+  gem 'capistrano','~>3.11', require: false
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler', '~>1.5'
+  gem 'capistrano-rails',  '~>1.4', require: false
 end
 
 group :development, :test do
@@ -38,4 +42,10 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+end
+
+
+
+group :production, :test do
+  gem 'pg', '~> 0.21'
 end
