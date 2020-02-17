@@ -35,7 +35,6 @@ class HeadlessBrowser
         # Capybara.current_driver = Capybara.javascript_driver
         browser = Capybara.current_session
         browser.visit url
-        binding.pry
         doc = browser.body
         # rowser.driver.browser.close
         doc
